@@ -9,6 +9,7 @@ import services from 'src/services/**/*.{js,ts}'
 import { db } from 'src/lib/db'
 
 export const handler = createGraphQLHandler({
+  getCurrentUser,
   schema: makeMergedSchema({
     schemas,
     services: makeServices({ services }),
